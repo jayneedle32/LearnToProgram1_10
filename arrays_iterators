@@ -14,3 +14,14 @@ words.sort
 
 #---------------------------------------
 
+table_width = 40
+table = [["1", "2", "3"], ["Numbers", "Letters", "Variables"], ["1", "72", "118"]
+
+
+puts ("Table of Contents".center(table_width))                
+puts " "  
+table[0].each { |chapter|
+table[1].each { |title|
+table[2].each { |page|
+puts ("Chapter #{chapter}:  #{title}  ".ljust(table_width/2)) + ("page #{page}".rjust(table_width/2))
+}}}
