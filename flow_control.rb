@@ -89,6 +89,7 @@ puts "OK, BYE NOW!"
 #-----------------------------------------------
 
 
+
 puts "Enter a starting year"
 start_year = gets.chomp
 
@@ -101,7 +102,10 @@ ending = end_year.to_i
 while start < ending
     start += 1
     
-    if start % 4 == 0
+    if start % 400 == 0
+    puts start
+    elsif start % 100 == 0
+    elsif start % 4 == 0
     puts start
     end
     
