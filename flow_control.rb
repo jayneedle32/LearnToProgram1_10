@@ -29,3 +29,59 @@ end
 end
 
 puts "OK, BYE NOW!"
+
+#--------------------------------------------------------
+
+
+puts "Start chatting with grammy!"
+answer1 = gets.chomp
+
+while answer1 != "BYE"
+
+if answer1 == answer1.upcase
+    year1 = rand(99) + 1900
+    puts "NO, NOT SINCE #{year1}!"
+    answer1 = gets.chomp
+
+else
+    puts "HUH?!  SPEAK UP, SONNY!"
+    answer1 = gets.chomp
+    
+end
+end
+
+puts "HUH?!  SPEAK UP, SONNY!"
+answer2 = gets.chomp
+
+while answer2 != "BYE"
+
+if answer2 == answer2.upcase
+    year2 = rand(99) + 1900
+    puts "NO, NOT SINCE #{year2}!"
+    answer2 = gets.chomp
+
+else
+    puts "HUH?!  SPEAK UP, SONNY!"
+    answer2 = gets.chomp
+    
+end
+end
+
+puts "HUH?!  SPEAK UP, SONNY!"
+answer3 = gets.chomp
+
+while answer3 != "BYE"
+
+if answer3 == answer3.upcase
+    year3 = rand(99) + 1900
+    puts "NO, NOT SINCE #{year3}!"
+    answer3 = gets.chomp
+
+else
+    puts "HUH?!  SPEAK UP, SONNY!"
+    answer3 = gets.chomp
+    
+end
+end
+
+puts "OK, BYE NOW!"
