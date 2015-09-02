@@ -1,0 +1,16 @@
+
+words = []
+
+puts "Type one words and press enter to add it to the list. To return list in ABC order, press enter without typing anything."
+answer = gets.chomp
+words.push answer.capitalize
+
+while answer != ""
+answer = gets.chomp
+words.push answer.capitalize
+end
+
+words.sort
+
+#---------------------------------------
+
