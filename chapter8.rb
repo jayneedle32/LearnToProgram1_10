@@ -70,3 +70,13 @@ englishNumber(1111)
 
 # --------------------------------------------------------------
 
+bottles = 99
+
+while bottles > 1
+print "#{englishNumber(bottles)} bottles of beer on the wall. #{englishNumber(bottles)} bottles of beer. Take one down, pass it around, #{englishNumber(bottles)} bottles of beer on the wall! "
+bottles -= 1
+end
+
+if bottles == 1
+print"#{englishNumber(bottles)} bottle of beer on the wall. #{englishNumber(bottles)} bottle of beer. Take one down, pass it around, #{englishNumber(bottles)} bottle of beer on the wall! "
+end
