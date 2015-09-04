@@ -29,8 +29,6 @@ class Dragon
     @asleep = false
     @stuffInBelly     = 10  # He's full.
     @stuffInIntestine =  0  # He doesn't need to go.
-    puts "What would you like to name your dragon?"
-    dragonName = gets.chomp
     puts @name + ' is born.'
     
   end
@@ -136,6 +134,9 @@ class Dragon
 
 end
 
+puts "What would you like to name your dragon?"
+    dragonName = gets.chomp
+    
 pet = Dragon.new dragonName
 
 puts "You can interact with you dragon by typing: Feed | Walk | Nap | Toss | Rock"
