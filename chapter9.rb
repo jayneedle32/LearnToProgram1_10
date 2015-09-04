@@ -175,6 +175,7 @@ def initialize
     @tall = 0
     @age = 0
     @fruit = 0
+    puts "You have planted an orange tree!"
 end
 
 def height
@@ -201,6 +202,7 @@ end
 
 def oneYearPasses
     @age += 1
+    @fruit = 0
     if @tall < 18
     @tall += 3
     else
