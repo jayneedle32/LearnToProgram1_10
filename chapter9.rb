@@ -181,28 +181,67 @@ def height
     puts 'The tree is ' + @tall.to_s + ' feet tall.'
 end
 
+def treeAge
+    puts 'The tree is ' + @age.to_s + ' years old.'
+end
+
+def countOranges
+    puts 'The tree has ' + @fruit.to_s + ' oranges.'
+end
+
+def pickOranges amount
+    @fruit -= amount
+    puts 'You have picked ' + amount.to_s + ' oranges from the tree.'
+    if @fruit == 0
+    puts "You picked the tree bare!"
+    elsif @fruit < 0
+    puts "You didn't have enough oranges, so you borrowed some from your neighbors tree."
+    end
+end
+
 def oneYearPasses
     @age += 1
     if @tall < 18
     @tall += 3
-    elsif @tall >= 18
-        if @age == 7 || 8
-        @fruit += 50
-        elsif @age == 9 || 10
-        @fruit += 100
+    else
+        if @age == 7
+        @fruit = 50
+        elsif @age == 8
+        @fruit = 50
+        elsif @age == 9 
+        @fruit = 100
+        elsif @age == 10
+        @fruit = 100
+        elsif @age == 11
+        @fruit = 200
+        elsif @age == 12
+        @fruit = 200
         else
-        @fruit += 200
+        puts "The tree has died..."
+        exit
         end
-    elseif @age > 13
-    exit
     end
 end
 
 end
 
 tree = OrangeTree.new
-tree.oneYearPasses
-tree.oneYearPasses
-tree.oneYearPasses
-tree.oneYearPasses
-tree.height
+
+puts "Press enter to simulate a year passing."
+answer = gets.chomp 
+
+while answer == ""
+    puts "One year has passed"
+    tree.oneYearPasses
+    tree.height
+    tree.countOranges
+    tree.treeAge
+    puts "If you have some oranges, take some. How many do you want to pick this year? Or type 'none' to simulate another year. Either way another year will be simulated."
+    oranges = gets.chomp
+    if oranges == "none"
+        answer = ""
+    else
+    tree.pickOranges(oranges.to_i)
+    tree.countOranges
+    end
+end
