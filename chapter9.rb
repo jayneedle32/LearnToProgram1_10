@@ -166,3 +166,43 @@ end
 action = gets.chomp
 
 end
+
+#-----------------------------------------------------
+
+class OrangeTree
+
+def initialize
+    @tall = 0
+    @age = 0
+    @fruit = 0
+end
+
+def height
+    puts 'The tree is ' + @tall.to_s + ' feet tall.'
+end
+
+def oneYearPasses
+    @age += 1
+    if @tall < 18
+    @tall += 3
+    elsif @tall >= 18
+        if @age == 7 || 8
+        @fruit += 50
+        elsif @age == 9 || 10
+        @fruit += 100
+        else
+        @fruit += 200
+        end
+    elseif @age > 13
+    exit
+    end
+end
+
+end
+
+tree = OrangeTree.new
+tree.oneYearPasses
+tree.oneYearPasses
+tree.oneYearPasses
+tree.oneYearPasses
+tree.height
