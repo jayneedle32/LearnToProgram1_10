@@ -7,14 +7,18 @@ end
 
 grandfatherClock
 
-
 #----------------------------------------------------------
 
+$depth = 0
+$space = '  '
+
 def log descriptionOfBlock, &block
-    puts ''+descriptionOfBlock+' " starts now."'
+    puts $space*$depth + ''+descriptionOfBlock+' starts now.'
+    $depth = $depth + 1
     value_returned = block.call
-    puts ''+descriptionOfBlock+' " has ended."'
-    puts value_returned
+    $depth = $depth - 1
+    puts $space*$depth + ''+descriptionOfBlock+' has ended.'
+    puts $space*$depth + value_returned.to_s
 end
 
 log 'outer block' do
